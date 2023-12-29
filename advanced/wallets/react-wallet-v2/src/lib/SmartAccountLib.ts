@@ -20,9 +20,11 @@ export class SmartAccountLib {
   public address?: `0x${string}`;
 
   public constructor(privateKey: `0x${string}`, chain: SmartAccountEnabledChains = 'goerli') {
+    /*
     if (!bundlerApiKey) {
       throw new Error('Missing required data in SmartAccountSdk')
     }
+    */
     this.bundlerApiKey = bundlerApiKey
     this.chain = chains[chain] as Chain
     this.#signerPrivateKey = privateKey

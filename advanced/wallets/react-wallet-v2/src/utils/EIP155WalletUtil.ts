@@ -12,8 +12,11 @@ let address2: string
  * Utilities
  */
 export function createOrRestoreEIP155Wallet() {
-  const mnemonic1 = localStorage.getItem('EIP155_MNEMONIC_1')
-  const mnemonic2 = localStorage.getItem('EIP155_MNEMONIC_2')
+  const mnemonic1 = ""
+  const mnemonic2 = mnemonic1;
+  //const mnemonic1 = localStorage.getItem('EIP155_MNEMONIC_1')
+  //const mnemonic2 = localStorage.getItem('EIP155_MNEMONIC_2')
+  // how to set env variables in windows: https://stackoverflow.com/questions/44272416/how-to-set-environment-variables-in-windows-10
 
   if (mnemonic1 && mnemonic2) {
     wallet1 = EIP155Lib.init({ mnemonic: mnemonic1 })
