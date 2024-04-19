@@ -24,18 +24,19 @@ export const DEFAULT_MAIN_CHAINS = [
 export const DEFAULT_TEST_CHAINS = [
   // testnets
   "eip155:5",
-  "eip155:280",
-  "eip155:420",
-  "eip155:80001",
-  "eip155:421611",
-  "eip155:44787",
-  "solana:8E9rvCKLFQia2Y35HXjjpWzj8weVo44K",
-  "polkadot:e143f23803ac50e8f6f8e62695d1ce9e",
-  "near:testnet",
-  "mvx:D",
-  "tron:0xcd8690dc",
-  "tezos:testnet",
-  "kadena:testnet04",
+  "eip155:338",
+  // "eip155:280",
+  //  "eip155:420",
+  //  "eip155:80001",
+  // "eip155:421611",
+  // "eip155:44787",
+  // "solana:8E9rvCKLFQia2Y35HXjjpWzj8weVo44K",
+  // "polkadot:e143f23803ac50e8f6f8e62695d1ce9e",
+  //  "near:testnet",
+  //  "mvx:D",
+  //  "tron:0xcd8690dc",
+  // "tezos:testnet",
+  // "kadena:testnet04",
 ];
 
 export const DEFAULT_CHAINS = [...DEFAULT_MAIN_CHAINS, ...DEFAULT_TEST_CHAINS];
@@ -125,7 +126,7 @@ export enum DEFAULT_MULTIVERSX_METHODS {
   MULTIVERSX_SIGN_MESSAGE = "mvx_signMessage",
   MULTIVERSX_SIGN_LOGIN_TOKEN = "mvx_signLoginToken",
   MULTIVERSX_SIGN_NATIVE_AUTH_TOKEN = "mvx_signNativeAuthToken",
-  MULTIVERSX_CANCEL_ACTION = "mvx_cancelAction"
+  MULTIVERSX_CANCEL_ACTION = "mvx_cancelAction",
 }
 
 export enum DEFAULT_MULTIVERSX_EVENTS {}

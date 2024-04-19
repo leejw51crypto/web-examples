@@ -36,6 +36,13 @@ export const EIP155ChainData: ChainsMap = {
     slip44: 60,
     testnet: true,
   },
+  "338": {
+    name: "cronos testnet",
+    id: "eip155:338",
+    rpc: ["https://evm-dev-t3.cronos.org"],
+    slip44: 60,
+    testnet: true,
+  },
   "10": {
     name: "Optimism Mainnet",
     id: "eip155:10",
@@ -136,6 +143,10 @@ export const EIP155Metadata: NamespaceMetadata = {
     rgb: EIP155Colors.ethereum,
   },
   "5": {
+    logo: BLOCKCHAIN_LOGO_BASE_URL + "eip155:1.png",
+    rgb: EIP155Colors.ethereum,
+  },
+  "338": {
     logo: BLOCKCHAIN_LOGO_BASE_URL + "eip155:1.png",
     rgb: EIP155Colors.ethereum,
   },
