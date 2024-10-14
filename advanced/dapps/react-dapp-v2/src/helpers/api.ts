@@ -37,6 +37,14 @@ export const rpcProvidersByChainId: Record<number, any> = {
       symbol: "ETH",
     },
   },
+  282: {
+    name: "cronos zkevm testnet",
+    baseURL: "https://testnet.zkevm.cronos.org",
+    token: {
+      name: "Ether",
+      symbol: "ETH",
+    },
+  },
   324: {
     name: "zkSync Era",
     baseURL: "https://mainnet.era.zksync.io",
