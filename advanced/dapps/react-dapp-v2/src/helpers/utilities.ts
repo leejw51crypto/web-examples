@@ -1,4 +1,5 @@
 import { BigNumber, BigNumberish, providers, utils } from "ethers";
+import { BigNumber as JsBigNumber } from 'bignumber.js';
 import * as encoding from "@walletconnect/encoding";
 import { TypedDataUtils } from "eth-sig-util";
 import * as ethUtil from "ethereumjs-util";
@@ -196,7 +197,9 @@ export const toWad = (amount: string, decimals = 18): BigNumber => {
 };
 
 export const fromWad = (wad: BigNumberish, decimals = 18): string => {
-  return sanitizeDecimals(utils.formatUnits(wad, decimals), decimals);
+  const number = new JsBigNumber(wad.toString());
+  const number2 = BigNumber.from(number.toFixed(0).toString() );
+  return sanitizeDecimals(utils.formatUnits(number2, decimals), decimals);
 };
 
 export const LOCALSTORAGE_KEY_TESTNET = "TESTNET";

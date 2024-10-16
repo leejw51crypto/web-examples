@@ -1,4 +1,6 @@
+import {BigNumber as JsBigNumber} from 'bignumber.js';
 import { BigNumber, utils } from "ethers";
+
 import { createContext, ReactNode, useContext, useState } from "react";
 import * as encoding from "@walletconnect/encoding";
 import { Transaction as EthTransaction } from "@ethereumjs/tx";
@@ -256,7 +258,10 @@ export function JsonRpcContextProvider({
 
         const tx = await formatTestTransaction(account);
 
-        const balance = BigNumber.from(balances[account][0].balance || "0");
+        const balance2 = balances[account][0].balance || "0";
+        const balance3= new JsBigNumber(balance2.toString());
+        const balance= BigNumber.from(balance3.toFixed(0).toString());
+        
         if (balance.lt(BigNumber.from(tx.gasPrice).mul(tx.gasLimit))) {
           return {
             method: DEFAULT_EIP155_METHODS.ETH_SEND_TRANSACTION,

@@ -59,6 +59,14 @@ export const rpcProvidersByChainId: RpcProvidersByChainId = {
       symbol: "ETH",
     },
   },
+  282: {
+    name: "Cronos zkEVM Sepolia Testnet",
+    baseURL: "https://testnet.zkevm.cronos.org",
+    token: {
+      name: "zkTCRO",
+      symbol: "zkTCRO",
+    },
+  },
   324: {
     name: "zkSync Era",
     baseURL: WALLETCONNECT_RPC_BASE_URL + "&chainId=eip155:324",

@@ -35,6 +35,7 @@ export const EIP155ChainData: ChainsMap = {
     slip44: 60,
     testnet: true,
   },
+
   "11155111": {
     name: "Ethereum Sepolia",
     id: "eip155:11155111",
@@ -74,6 +75,13 @@ export const EIP155ChainData: ChainsMap = {
     name: "zkSync Era Testnet",
     id: "eip155:280",
     rpc: ["https://testnet.era.zksync.dev"],
+    slip44: 60,
+    testnet: true,
+  },
+  "282": {
+    name: "Cronos zkEVM Sepolia Testnet",
+    id: "eip155:282",
+    rpc: ["https://testnet.zkevm.cronos.org"],
     slip44: 60,
     testnet: true,
   },
@@ -169,6 +177,11 @@ export const EIP155Metadata: NamespaceMetadata = {
   "280": {
     name: "zkSync Era Testnet",
     logo: "/assets/" + "eip155-324.svg",
+    rgb: EIP155Colors.zksync,
+  },
+  "282": {
+    name: "Cronos zkEVM Sepolia Testnet",
+    logo: "/assets/" + "eip155-282.png",
     rgb: EIP155Colors.zksync,
   },
   "324": {
